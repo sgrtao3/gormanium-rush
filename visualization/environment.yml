@@ -1,0 +1,5 @@
+name: gormanium_visualise
+dependencies:
+  - graphviz
+  - python-graphviz
+  - numpy

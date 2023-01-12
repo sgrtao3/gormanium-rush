@@ -1,0 +1,26 @@
+This folder should contain all the data files of the circuits that need to be visualised. Two example data files are included, one with only the schematic, the other with the schematic and flow data.
+
+They should be in the following format:
+
+File name: circuit_[num_units]_[iteration]
+
+Data structure
+First row being the circuit schemetic as specified, delimited by comma length 2 * num_units + 1
+X, X, X, X
+
+Second row being the gormanium flow volume of all the edges, delimited by comma (optional), length num_units + 2
+- n-value is the gormanium inflow into cell n
+- second last value is the gormanium inflow into the concentration
+- last value is the gormanium inflow into the tailings
+X, X, X, X
+
+Third row being the waste flow volume of all the edges, delimited by comma (optional), length num_units + 2
+- n-value is the waste inflow into cell n
+- second last value is the waste inflow into the concentration
+- last value is the waste inflow into the tailings
+X, X, X, X
+
+Last row being a single float of the performance of the circuit (optional)
+
+Assumption:
+If the gormanium flow data is present, so will the waste flow data and performance.
